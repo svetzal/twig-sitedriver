@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Page Not Found</title>
-  </head>
-  <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, the page you requested does not exist on this website.</p>
-  </body>
-</html>
-
+{% extends 'page.html' %}
+{% block title %}Page Not Found{% endblock %}
+{% block content %}
+<h1>Page Not Found</h1>
+<p>Sorry, the page you requested does not exist on this website.</p>
+{% endblock %}
