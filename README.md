@@ -55,26 +55,24 @@ you may want to do something like:
 
 Here are what the options are and what they mean:
 
-`template_dir`
-The folder in which your site templates are located. Defaults to 'templates'.
+`template_dir` The folder in which your site templates are located.
+Defaults to 'templates'.
 
-cache_dir        the folder used to cache output
-                 defaults to 'template_cache'
+`cache_dir` The folder used to cache output. Defaults to
+'template_cache'.
 
-404_template     the template in the template_dir to be used for 404
-                 (page not found) errors
-                 defaults to '404.html'
+`404_template` The template in the 'template_dir' to be used for 404
+(page not found) errors.  Defaults to '404.html'.
 
-cache            true or false, turns caching on or off
-                 defaults to true
+`cache` Set to true or false, turns caching on or off. Defaults to true.
 
-reload           true or false, whether cache is rebuilt when templates
-                 change so you can update templates, reload, see changes
-                 (note, in my experience this does not improve
-                 performance)
-                 defaults to true
+`reload` Set to true or false. Determines whether cache is rebuilt when
+templates change so you can update templates, reload, see changes.
+(Note, in my experience this does not improve performance). Defaults to
+true.
 
-debug            not useful for most, turns on PHP error output
+`debug` Not useful for most people, turns on PHP error output. Defaults
+to false.
 
 At this time, Twig is expected to be found in a folder called
 'twig-1.8.1' (the current version as of this writing). This will be
