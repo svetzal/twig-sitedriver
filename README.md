@@ -32,31 +32,31 @@ several options to tune.
 
 At the bottom of the sitedriver file, you will see:
 
-  $tsd = new TwigSiteDriver();
-  $tsd->service_request();
+    $tsd = new TwigSiteDriver();
+    $tsd->service_request();
 
 You can pass configuration options in when the TwigSiteDriver object is
 instantiated. ie.
 
-  $tsd = new TwigSiteDriver(array('cache' => false));
-  $tsd->service_request();
+    $tsd = new TwigSiteDriver(array('cache' => false));
+    $tsd->service_request();
 
 This will turn off caching. If you want to set several options at once,
 you may want to do something like:
 
-  $opts = array(
-    'template_dir' => 'site',
-    'cache_dir' => 'my_template_cache',
-    '404_template' => 'missing.html',
-    'reload' => false
-  );
-  $tsd = new TwigSiteDriver($opts);
-  $tsd->service_request();
+    $opts = array(
+      'template_dir' => 'site',
+      'cache_dir' => 'my_template_cache',
+      '404_template' => 'missing.html',
+      'reload' => false
+    );
+    $tsd = new TwigSiteDriver($opts);
+    $tsd->service_request();
 
 Here are what the options are and what they mean:
 
-template_dir     the folder in which your site templates are located
-                 defaults to 'templates'
+template_dir
+> The folder in which your site templates are located. Defaults to 'templates'.
 
 cache_dir        the folder used to cache output
                  defaults to 'template_cache'
