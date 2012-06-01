@@ -55,8 +55,8 @@ you may want to do something like:
 
 Here are what the options are and what they mean:
 
-template_dir
-> The folder in which your site templates are located. Defaults to 'templates'.
+`template_dir`
+The folder in which your site templates are located. Defaults to 'templates'.
 
 cache_dir        the folder used to cache output
                  defaults to 'template_cache'
