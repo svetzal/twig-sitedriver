@@ -77,3 +77,9 @@ to false.
 At this time, Twig is expected to be found in a folder called
 'twig-1.8.1' (the current version as of this writing). This will be
 improved in the future.
+
+Changelog
+---------
+
+v1.0.1 - Add page variables to indicate current filename when rendering
+v1.0.0 - Initial Release

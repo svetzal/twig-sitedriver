@@ -1,6 +1,6 @@
 <?php
 /**
- * Twig SiteDriver v1.0
+ * Twig SiteDriver v1.0.1
  *
  * Licensed under the terms of the Simplified BSD License
  *
@@ -119,6 +119,13 @@ class TwigSiteDriver {
     return $this->php_filename && file_exists($this->php_filepath);
   }
 
+  public function default_variables() {
+    return array(
+      'base_filename' => $this->base_filename,
+      'filename' => $this->filename
+    );
+  }
+
   public function service_request() {
     // If this file is called 'index.php', need to avoid a redirect loop
     if ($this->php_filename != "/index.php" && $this->php_file_exists()) {
@@ -130,7 +137,7 @@ class TwigSiteDriver {
       // Check for template file with provided name, and render it or 404
       $template_file = $_SERVER['DOCUMENT_ROOT']."/".$this->options['template_dir'].$this->filename;
       if (file_exists($template_file)) {
-          echo $this->get_twig()->render($this->filename);
+          echo $this->get_twig()->render($this->filename, $this->default_variables());
       } else {
           header("HTTP/1.0 404 Not Found");
           echo $this->get_twig()->render($this->options['404_template']);
